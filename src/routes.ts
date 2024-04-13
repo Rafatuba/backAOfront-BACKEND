@@ -7,6 +7,7 @@ import {
 import { CreateMemberController } from "./controllers/CreateMemberController";
 import { ListMemberController } from "./controllers/ListMemberController";
 import { DeleteMemberController } from "./controllers/DeleteMemberController";
+import { UpdateMemberController } from "./controllers/UpdateMemberController";
 
 export async function routes(
   fastify: FastifyInstance,
@@ -31,6 +32,14 @@ export async function routes(
     "/musicos",
     async (request: FastifyRequest, reply: FastifyReply) => {
       return new DeleteMemberController().handle(request, reply);
+    }
+  );
+
+  //Não utilizado no front-end
+  fastify.put(
+    "/musicos",
+    async (request: FastifyRequest, reply: FastifyReply) => {
+      return new UpdateMemberController().handle(request, reply);
     }
   );
 }
