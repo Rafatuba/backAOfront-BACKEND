@@ -14,7 +14,7 @@ const start = async () => {
   const port = process.env.PORT || 3333;
 
   try {
-    await app.listen(port, undefined);
+    await app.listen({ port: port as number });
   } catch (err) {
     process.exit(1); //parar o processo da app.
   }
