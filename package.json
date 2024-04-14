@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc -p tsconfig.json",
-    "start": "node build/index.js"
+    "start": "node build/server.js"
   },
   "keywords": [],
   "author": "",
